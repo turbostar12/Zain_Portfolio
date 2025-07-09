@@ -3,24 +3,24 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  margin: 0;
   background: #2b2929;
   font-family: Arial, sans-serif;
+  padding: 20px;
 }
+
 .calculator {
   background: #5a5757;
-  padding: 0px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  padding-left: 30px;
+  padding: 20px;
   border-radius: 20px;
   box-shadow: 0 0 40px #28b6f8;
-  margin-right: 50px;
-  margin-left: 50px;
   border: 2px solid black;
-
+  width: 100%;
+  max-width: 400px;
 }
+
 .display {
-  width: 75%;
+  width: 90%;
   height: 60px;
   font-size: 2rem;
   text-align: right;
@@ -28,12 +28,16 @@ body {
   margin-bottom: 20px;
   border: 2px solid black;
   border-radius: 10px;
+  background-color: #f2f2f2;
+  color: #333;
 }
+
 .buttons {
   display: grid;
-  grid-template-columns: repeat(4, 70px);
-  gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
 }
+
 button {
   height: 60px;
   font-size: 1.2rem;
@@ -42,8 +46,33 @@ button {
   background: #302f33;
   color: white;
   cursor: pointer;
-  transition: 0.2s;
+  transition: background 0.2s, transform 0.1s;
 }
+
 button:hover {
   background: #666;
+  transform: scale(1.05);
+}
+
+/* ✅ Mobile Responsive */
+@media (max-width: 480px) {
+  .calculator {
+    padding: 15px;
+    max-width: 100%;
+  }
+
+  .display {
+    font-size: 1.5rem;
+    height: 50px;
+    padding: 8px;
+  }
+
+  button {
+    font-size: 1rem;
+    height: 50px;
+  }
+
+  .buttons {
+    gap: 10px;
+  }
 }
