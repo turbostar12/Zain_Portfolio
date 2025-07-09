@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zain Mehboob | Frontend Developer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #eef2f3, #8e9eab);
+      color: #333;
+    }
+
+    header.hero {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+      animation: slideInDown 1s ease-out;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    @keyframes slideInDown {
+      0% { transform: translateY(-100%); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 8px;
+    }
+
+    .hero p {
+      font-size: 1rem;
+    }
+
+    .btn {
+      background: white;
+      color: #4e54c8;
+      padding: 10px 22px;
+      margin-top: 18px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-block;
+      transition: 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #333;
+      color: #fff;
+    }
+
+    nav.navbar {
+      background: #222;
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+    }
+
+    nav.navbar a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.2s;
+    }
+
+    nav.navbar a:hover {
+      color: #ffcc00;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #4e54c8;
+    }
+
+    blockquote {
+      font-style: italic;
+      color: #555;
+      margin: 20px auto;
+      padding: 15px;
+      border-left: 5px solid #4e54c8;
+      background: #f8f8f8;
+    }
+
+    .scroll-animate {
+      opacity: 0;
+      transform: translateY(60px);
+      transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+      will-change: opacity, transform;
+    }
+
+    .scroll-animate.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .skills-list li {
+      list-style: none;
+      background: #fff;
+      padding: 10px 20px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .skills-list li:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    .project {
+      background: white;
+      border-radius: 15px;
+      padding: 25px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      margin-top: 30px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .project:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 16px 30px rgba(0, 0, 0, 0.25);
+    }
+
+    .project img {
+      width: 100%;
+      max-width: 280px;
+      height: auto;
+      border-radius: 8px;
+      display: block;
+      margin: 0 auto 10px;
+      object-fit: contain;
+      transition: transform 0.4s ease;
+    }
+
+    .project:hover img {
+      transform: scale(1.05);
+    }
+
+    .project a {
+      color: #4e54c8;
+      text-decoration: none;
+      margin-right: 10px;
+      font-weight: 500;
+    }
+
+    .project a:hover {
+      color: #222;
+    }
+
+    #social a {
+      color: #4e54c8;
+      font-size: 1.8rem;
+      margin: 0 10px;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    #social a:hover {
+      color: #222;
+      transform: scale(1.2);
+    }
+
+    #social h2 {
+      text-align: center;
+    }
+
+    #social p {
+      text-align: center;
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+
+    #social .icon-row {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    footer {
+      text-align: center;
+      background: #222;
+      color: white;
+      padding: 25px;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2rem; }
+      nav.navbar { flex-direction: column; gap: 10px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <h1>Hi, I'm Zain 👋</h1>
+    <p>A passionate Frontend Developer</p>
+    <p>Open to internships, jobs & freelance work</p>
+    <a href="#projects" class="btn">See My Work</a>
+  </header>
+
+  <nav class="navbar">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#social">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <blockquote>"First, solve the problem. Then, write the code." – John Johnson</blockquote>
+    <p>Hello! I'm Zain Mehboob, a dedicated and curious Frontend Developer currently pursuing my Bachelor's in Artificial Intelligence at NUTECH, Islamabad. My core strengths lie in crafting user-friendly interfaces using HTML, CSS, and JavaScript. I am also diving deeper into React and Node.js as I transition into full-stack development.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul class="skills-list">
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+      <li>GitHub</li>
+      <li>React (Learning)</li>
+      <li>Node.js (Learning)</li>
+    </ul>
+  </section>
+
+  <section id="quotes">
+    <blockquote class="scroll-animate">"The only way to learn a new programming language is by writing programs in it." – Dennis Ritchie</blockquote>
+    <blockquote class="scroll-animate">"Practice makes progress, not perfection."</blockquote>
+    <blockquote class="scroll-animate">"Code is not just code, it’s a story waiting to be executed."</blockquote>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project">
+      <img src="images/project1.png" alt="Calculator Screenshot" />
+      <h3>Calculator App</h3>
+      <p>A simple yet functional calculator built using HTML, CSS, and JavaScript.</p>
+      <a href="calculator/calculator.html" target="_blank">Live Demo</a>
+      <a href="https://github.com/turbostar12/My_Calculator" target="_blank">GitHub Repo</a>
+    </div>
+
+    <div class="project">
+      <img src="images/project2.png" alt="Company Screenshot" />
+      <h3>Enterprises Company Website</h3>
+      <p>A simple yet functional website of an Enterprises Company built using HTML, CSS, and JavaScript.</p>
+      <a href="enterprises\home.html" target="_blank">Live Demo</a>
+      <a href="https://github.com/turbostar12/My_Calculator" target="_blank">GitHub Repo</a>
+    </div>
+    <div class="project" style="opacity: 0.3; pointer-events: none;">
+      <img src="https://via.placeholder.com/280x180?text=Coming+Soon" alt="Coming Soon" />
+      <h3>Coming Soon</h3>
+      <p>New exciting project will be added here soon!</p>
+    </div>
+  </section>
+
+  <section id="social" class="scroll-animate">
+    <h2>Free for any kind of Freelancing or Project Collaboration</h2>
+    <p>Feel free to contact me through social media below</p>
+    <div class="icon-row">
+      <a href="mailto:zainch22550@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+      <a href="https://github.com/turbostar12" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/zainmehboob" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Zain Mehboob. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        } else {
+          entry.target.classList.remove("show");
+        }
+      });
+    });
+
+    document.querySelectorAll(".scroll-animate").forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
+

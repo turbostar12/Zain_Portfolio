@@ -1,0 +1,373 @@
+body{ font-family:sans-serif ;
+     background-color: rgb(228, 222, 222);
+}
+a{
+    text-decoration: none;
+}
+header {
+    position: sticky;
+    top: 0;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 10px 20px;
+    border-bottom: 2px solid #ccc;
+    z-index: 1000;
+}
+.logo img {
+    width: 100px; 
+    height: auto;
+    border: 2px solid white;
+    border-radius: 50px;
+}
+nav ul.menu {
+    list-style-type: none;
+    display: flex;
+    gap: 15px;
+    position: relative;
+}
+nav ul.menu li {
+    position: relative;
+}
+nav ul.menu li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    padding: 8px 12px;
+    display: block;
+}
+nav ul.menu li a:hover {
+    color: #007BFF;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+}
+nav ul.menu li.dropdown:hover .dropdown-content {
+    display: block;
+}
+nav ul.menu .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    background-color: #f4f4f4;
+    min-width: 150px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+nav ul.menu .dropdown-content li {
+    width: 100%;
+}
+nav ul.menu .dropdown-content li a {
+    padding: 8px 12px;
+    color: #333;
+    text-decoration: none;
+    display: block;
+}
+nav ul.menu .dropdown-content li a:hover {
+    background-color: #007BFF;
+    color: white;
+}
+.search {
+    display: flex;
+    gap: 5px;
+}
+.search input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.search button {
+    padding: 5px 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.search button:hover {
+    background-color: #0056b3;
+}
+.content {
+    padding: 20px;
+    text-align: left;
+ font-size: large;
+}
+.services-section {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #c0bbb5;
+    padding: 20px;
+    margin: 20px auto;
+    text-align: center;
+    font-size: 18px;
+}
+.services-section img {
+    max-width: 100%;
+    height: 120px;
+    margin-top: 10px;
+    border-radius: 2px;
+}
+.sidebar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 15px;
+}
+.sidebar .box {
+    flex: 1;
+    border: 1px solid #c0bbb5;
+    border-bottom: 4px solid #c0bbb5;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #fff;
+}
+footer {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.footer-column {
+    flex: 1;
+    margin: 10px;
+}
+.social a{
+    color: white ;
+}
+.container {
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    gap: 20px; 
+    padding: 20px;
+  }
+  .text {
+    flex: 1; 
+    font-size: 1.2rem; 
+  }
+  .photo img {
+    max-width: 600px; 
+    width: 500px; 
+    height:240px; 
+    border-radius: 10px
+  }
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column; 
+      text-align: center; 
+    }
+    .photo img {
+      max-width: 100%; }}
+      .abc{ margin-left: 70px;
+        margin-top: 50px;}
+        .team-section {
+            text-align: center;
+            padding: 50px 20px;
+            background: #f9f9f9;
+          }
+          .team-section h2 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+          }
+          .team-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+          }          
+          .team-member {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+          }
+          
+          .team-member img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            object-fit: cover;
+            border: 2px solid #007BFF;
+          }
+          
+          .team-member h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #007BFF;
+          }
+          
+          .team-member p {
+            font-size: 0.9rem;
+            color: #555;
+          }
+          
+          .team-member p strong {
+            font-size: 1rem;
+            color: #333;
+          }
+          section.contact-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 40px;
+        }
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+        }
+        section.contact-container{
+            margin-bottom: 100px;
+            border-radius: 10px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        .form-group label {
+            font-size: 14px;
+            color: #555;
+        }
+        
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 5px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        
+        textarea {
+            resize: vertical;
+        }
+        
+        button.submit-btn {
+            padding: 12px 20px;
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        button.submit-btn:hover {
+            background-color: #45a049;
+        }
+        .contact-details {
+            margin-top: 30px;
+        }
+        
+        .contact-details p {
+            font-size: 16px;
+            color: #555;
+        }
+        .social-media {
+            margin-top: 20px;
+            text-align: center;
+        }        
+        .social-media a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: black;
+            font-size: 18px;
+        }
+        .social-media a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 768px) {
+            section.contact-container {
+                padding: 15px;
+            }        
+            .contact-form input, .contact-form textarea {
+                font-size: 14px;
+                padding: 8px;
+            }        
+            button.submit-btn {
+                padding: 10px 18px;
+                font-size: 14px;
+            }
+        }
+        .member-page {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }        
+        .member-image img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            display: block;
+            margin: 0 auto;
+        }  
+        .member-info {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }        
+        .member-info th, .member-info td {
+            padding: 10px;
+            border: 1px solid #ccc;
+            text-align: left;
+        }
+        .member-info th {
+            width: 30%;
+            background-color: #f4f4f4;
+        }
+        .bio {
+            margin-top: 30px;
+        }        
+        .bio p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #555;
+        }  
+        .social-media {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .social-media a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: grey;
+            font-size: 18px;
+        }        
+        .social-media a:hover {
+            text-decoration: underline;
+            color: #007BFF;
+        }
+        section.member-page{
+            border-radius: 10px;
+        }
+        .navigation-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }        
+        .navigation-buttons .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #5e615e; 
+            color: white; 
+            text-decoration: none; 
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            text-align: center;
+        }        
+        .navigation-buttons .button:hover {
+            text-decoration: underline;
+            background-color: #0056b3;
+        }
+        
+        

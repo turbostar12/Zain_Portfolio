@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="pbl.css">
+    <style>    
+    h2, h3 {
+        text-align: center;
+        color: #333;
+    }</style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="Logo (2).png" alt="Website Logo">
+        </div>
+       <nav> 
+            <ul class="menu">
+                <li><a href="home.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="aboutus.html" class="dropbtn">About Us</a>
+                        <ul class="dropdown-content">                        
+                            <li><a href="aboutus.html#mission">Mission</a></li>
+                            <li><a href="aboutus.html#history">History</a></li>
+                            <li><a href="aboutus.html#team">Our Team</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                    <li class="dropdown">
+                        <a href="#">Members</a><ul class="dropdown-content">                        
+                            <li><a href="aina.html">Aina Waseeq</a></li>
+                            <li><a href="mohsin.html">Hafiz Mohsin</a></li>
+                            <li><a href="zain.html">Zain Ch</a></li>
+                            <li><a href="musavir.html">Abdul Musavir</a></li>
+                        </ul></li>
+            </ul>
+        </nav>
+        <div class="search">
+            <input type="text" placeholder="Search...">
+            <button>Search</button>
+        </div>
+    </header>
+    <main>
+        <section class="contact-container">
+            <h2>Contact Us</h2>
+    
+            <!-- Contact Form -->
+            <form action="submit_form.php" method="POST" class="contact-form">
+                <div class="form-group">
+                    <label for="name"><b>Name:</b></label>
+                    <input type="text" id="name" name="name" required placeholder="Your Name">
+                </div>
+    
+                <div class="form-group">
+                    <label for="email"><b>Email:</b></label>
+                    <input type="email" id="email" name="email" required placeholder="Your Email">
+                </div>
+    
+                <div class="form-group">
+                    <label for="phone"><b>Phone Number:</b></label>
+                    <input type="tel" id="phone" name="phone" placeholder="Your Phone Number">
+                </div>
+    
+                <div class="form-group">
+                    <label for="message"><b>Message:</b></label>
+                    <textarea id="message" name="message" rows="4" required placeholder="Your Message"></textarea>
+                </div>
+    
+                <button type="submit" class="submit-btn"><b>Send Message</b></button>
+            </form>
+    
+            <!-- Contact Details -->
+            <div class="contact-details">
+                <h3>Our Contact Details</h3>
+                <p><strong>Email:</strong> <i>AliBhaiEnterpreses@gamil.com</i></p>
+                <p><strong>Phone:</strong> <i>+923704157958</i></p>
+                <p><strong>Address:</strong> <i>Setor# I-12/4, Islamabad, Pakistan</i></p>
+            </div>
+    
+            <!-- Social Media Links -->
+            <div class="social-media">
+                <h3>Follow Us:</h3>
+                <div class="social">
+                    <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://x.com/?lang=en" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <footer>
+        <div class="footer-column">
+            <h3>Ali Bhai Enterprises</h3>
+        </div>
+        <div class="footer-column">
+            <ul>
+                <li><a href="#privacy">Privacy Policy</a></li>
+                <li><a href="#terms">Terms of Service</a></li>
+            </ul>
+        </div> 
+    
+        <div class="footer-column">
+            <p>Follow us:</p>
+            <div class="social">
+                <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://x.com/?lang=en" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
