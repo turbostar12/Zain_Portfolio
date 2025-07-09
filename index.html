@@ -59,24 +59,63 @@
       color: #fff;
     }
 
-    nav.navbar {
-      background: #222;
-      padding: 15px;
+    .navbar {
+    background: #222;
+    padding: 15px;
+  }
+
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 25px;
+  }
+
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.2s;
+  }
+
+  .nav-links a:hover {
+    color: #ffcc00;
+  }
+
+  .nav-toggle {
+    display: none;
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      background: #333;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      padding: 20px;
+      z-index: 1000;
+    }
+
+    .nav-links.show {
       display: flex;
-      justify-content: center;
-      gap: 25px;
     }
 
-    nav.navbar a {
-      color: white;
-      text-decoration: none;
-      font-weight: 500;
-      transition: 0.2s;
+    .nav-toggle {
+      display: block;
     }
-
-    nav.navbar a:hover {
-      color: #ffcc00;
-    }
+  }
 
     section {
       padding: 60px 20px;
@@ -210,7 +249,7 @@
 
     @media (max-width: 768px) {
       .hero h1 { font-size: 2rem; }
-      nav.navbar { flex-direction: column; gap: 10px; }
+     
     }
   </style>
 </head>
@@ -223,10 +262,15 @@
   </header>
 
   <nav class="navbar">
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#social">Contact</a>
+    <div class="nav-container">
+      <span class="nav-toggle" id="navToggle"><i class="fas fa-bars"></i></span>
+      <div class="nav-links" id="navLinks">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#social">Contact</a>
+      </div>
+    </div>
   </nav>
 
   <section id="about">
@@ -268,7 +312,7 @@
       <h3>Enterprises Company Website</h3>
       <p>A simple yet functional website of an Enterprises Company built using HTML, CSS, and JavaScript.</p>
       <a href="enterprises\home.html" target="_blank">Live Demo</a>
-      <a href="https://github.com/turbostar12/My_Company.git" target="_blank">GitHub Repo</a>
+      <a href="https://github.com/turbostar12/My_Calculator" target="_blank">GitHub Repo</a>
     </div>
     <div class="project" style="opacity: 0.3; pointer-events: none;">
       <img src="https://via.placeholder.com/280x180?text=Coming+Soon" alt="Coming Soon" />
@@ -303,6 +347,12 @@
     });
 
     document.querySelectorAll(".scroll-animate").forEach(el => observer.observe(el));
+    const navToggle = document.getElementById("navToggle");
+  const navLinks = document.getElementById("navLinks");
+
+  navToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("show");
+  });
   </script>
 </body>
 </html>
