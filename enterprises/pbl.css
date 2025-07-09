@@ -369,5 +369,65 @@ footer {
             text-decoration: underline;
             background-color: #0056b3;
         }
-        
+        @media (max-width: 992px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  nav ul.menu {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .search {
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .sidebar {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .container .photo img {
+    width: 100%;
+    height: auto;
+  }
+
+  .footer-column {
+    flex: 100%;
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .team-container {
+    grid-template-columns: 1fr;
+  }
+
+  .member-info th,
+  .member-info td {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .navigation-buttons {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .navigation-buttons .button {
+    width: 80%;
+  }
+}
+
         
